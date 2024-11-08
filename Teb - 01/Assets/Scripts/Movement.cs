@@ -15,10 +15,11 @@ public class Movement : MonoBehaviour
    
     void Update()
     {
+      
         float moveX = Input.GetAxis("Horizontal");  
         float moveY = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveX,0f, moveY) * speed;
+        Vector3 movement = new Vector3(moveX * speed, 0f, moveY * speed) ;
 
         rb.velocity = movement;
     }
